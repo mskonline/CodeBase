@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="tutorial.designpatterns.factory.ShapeFactory"/>
+<fullyQualifiedTypeName name="java.math.BigInteger"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+</qualifiedTypeNameHistroy>
