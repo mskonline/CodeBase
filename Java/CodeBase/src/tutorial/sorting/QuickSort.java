@@ -24,6 +24,7 @@ public class QuickSort {
 		int pivot;
 
 		if(left < right) {
+			// Consider a random pivot and partition them
             pivot = randomizedPartition(left, right);
             qsort(left, pivot - 1);
             qsort(pivot + 1, right);
@@ -35,21 +36,22 @@ public class QuickSort {
 		int n = right - left + 1;
 		int pivot = (int) Math.random() % n;
 
-		// Place the pivot at the right most
+		// Place the pivot at the right most and then perform
+		// the partition. At the end, move pivot to its actual
+		// location
 		swapValue(left + pivot, right);
 		return doPartion(left, right);
 	}
 
 	private int doPartion(int left, int right){
-		int val = array[right];
+		int pivotval = array[right];
 		int pos = left;
 
 		while(pos <= right - 1){
-			if(array[pos] <= val){
+			if(array[pos] <= pivotval){
 				swapValue(left, pos);
 				++left;
 			}
-
 			++pos;
 		}
 
