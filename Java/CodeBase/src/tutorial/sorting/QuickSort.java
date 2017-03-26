@@ -70,4 +70,8 @@ public class QuickSort {
 			System.out.print(array[i]);
 		}
 	}
+
+	public int[] getSortedArray(){
+		return array;
+	}
 }
