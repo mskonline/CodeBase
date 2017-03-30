@@ -1,13 +1,7 @@
 #include <iostream>
-
+#include "../Data_Structures/node.h"
+#include <vector>
 using namespace std;
-
-struct node
-{
-    int data;
-    node *left;
-    node *right;
-};
 
 node *root = NULL;
 
@@ -17,20 +11,46 @@ void insertKey(node *, int);
 void search(int);
 void searchKey(node *, int);
 
+int height(node *);
+
+int minimum(node *);
+int maximum(node *);
+
+void top_view(node *);
+void printLeft(node *);
+void printForwardLeft(node *);
+void printRight(node *);
+void printForwardRight(node *);
+
 void printPreOrder(node *);
 void printInOrder(node *);
 void printPostOrder(node *);
 
+
+node* convertBST(node* root);
+void collectData(node *current, vector<int> *vec);
+
+
 int main(int argc, const char * argv[])
 {
     insert(5);
-    insert(2);
+    insert(4);
     insert(7);
+    insert(3);
+    insert(10);
 
-    printPreOrder(root);
+    // cout << "Height : " << height(root) << endl;
 
-    search(7);
+    // printPreOrder(root);
 
+    // search(7);
+
+    //cout << "Minimum : " << minimum(root) << endl;
+    //cout << "Maximum : " << maximum(root) << endl;
+
+    convertBST(root);
+
+    // top_view(root);
     return 0;
 }
 
@@ -44,7 +64,6 @@ void insert(int key)
         root->data = key;
         root->left = NULL;
         root->right = NULL;
-
     }
 }
 
@@ -100,6 +119,94 @@ void searchKey(node *current, int key)
         searchKey(current->right, key);
 }
 
+int height(node *current)
+{
+    if(current == NULL)
+        return -1;
+    else
+    {
+        int lheight = height(current->left);
+        int rheight = height(current->right);
+
+        if(lheight > rheight)
+            return (lheight + 1);
+        else
+            return (rheight + 1);
+    }
+}
+
+void top_view(node *current)
+{
+    printLeft(current);
+    printForwardRight(current->right);
+}
+
+void printLeft(node *current)
+{
+    if(current == NULL)
+        return;
+
+    if(current->left != NULL)
+        printLeft(current->left);
+
+    cout << current->data << endl;
+}
+
+void printForwardLeft(node *current)
+{
+    if(current == NULL)
+        return;
+
+    cout << current->data << endl;
+
+    if(current->left != NULL)
+        printForwardLeft(current->left);
+}
+
+void printRight(node *current)
+{
+    if(current == NULL)
+        return;
+
+    if(current->right != NULL)
+        printRight(current->right);
+
+    cout << current->data << endl;
+}
+
+void printForwardRight(node *current)
+{
+    if(current == NULL)
+        return;
+
+    cout << current->data << endl;
+
+    if(current->right != NULL)
+        printForwardRight(current->right);
+}
+
+int minimum(node *current)
+{
+    if(current == NULL)
+        return -1;
+
+    if(current->left != NULL)
+        minimum(current->left);
+    else
+        return current->data;
+}
+
+int maximum(node *current)
+{
+    if(current == NULL)
+        return -1;
+
+    if(current->right != NULL)
+        maximum(current->right);
+    else
+        return current->data;
+}
+
 void printPreOrder(node *current)
 {
     if(current == NULL)
@@ -133,3 +240,27 @@ void printPostOrder(node *current)
 
     cout << current->data << endl;
 }
+
+//
+node* convertBST(node* root)
+{
+    vector<int> *array = new vector<int>();
+
+    collectData(root, array);
+
+    for(int i = 0; i < array->size(); ++i)
+        cout << array->at(i);
+}
+
+void collectData(node *current, vector<int> *vec)
+{
+    if(current == NULL)
+        return;
+
+    collectData(current->left, vec);
+    vec->push_back(current->data);
+
+    collectData(current->right, vec);
+}
+
+
