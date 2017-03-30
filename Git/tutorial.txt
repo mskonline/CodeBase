@@ -1,0 +1,127 @@
+###############################################
+
+Git Commands and References
+
+1. Project creation
+2. Remote configuration
+3. Adding files
+4. Status
+5. Commit and Push
+6. Removing files
+7. GIT Man pages
+
+Last updated : 12:21 PM Thursday, March 30, 2017 CDT
+
+###############################################
+
+1. Project creation :-
+
+Two ways :
+	- init
+	- clone
+	
+	init :-
+	
+		To create a repository from an existing directory of files, you can simply run git init in that directory
+
+		git init
+
+	clone :-
+
+		git clone https://github.com/mskonline/Pidgin-FriendTrac
+			
+
+################################################			
+
+2. Remote configuration :-
+	
+-Adding Email and Username
+
+	git config --global user.email "msk.mymails@gmail.com"
+	git config --global user.name "mskonline"
+
+-Adding remote origin
+
+	git remote add origin https://github.com/mskonline/Pidgin-FriendTrac
+
+-Checking remote origin
+
+	git remote -v
+
+#################################################	
+	
+3. Adding files
+	
+-Add to the repository
+
+	git add <folder/file>
+
+#################################################	
+
+4. Status
+
+-Checking status (the state of the working directory and the staging area)
+
+	git status
+
+#################################################
+	
+5. Commit and Push
+	
+-commit (adding changes to the repository)
+
+	git commit -m 'comment' <path to file>
+
+-Push (to transfer the last commit(s) to a remote server)
+
+	git push
+	
+#################################################	
+
+6. Removing files
+
+-Removing a file from the repository and filesystem
+
+	git rm file1.txt
+	git commit -m "remove file1.txt"
+	git push
+
+-Removing a file just from the repository
+
+	git rm --cached file1.txt
+
+#################################################
+	
+7. GIT Man pages
+	
+-Man pages
+
+	man git <command>
+	man git commit
+
+#################################################
+
+7. Misc operations	
+	
+-Commit changes between last two commits	
+ 
+	git diff --name-only HEAD HEAD~1
+
+#################################################
+	
+References:
+
+	http://gitref.org/index.html
+
+	GIT for beginners : Commit, Push and go
+	http://readwrite.com/2013/10/02/github-for-beginners-part-2#awesm=~oDe0oJRwum7cOX
+
+	GIT forking a Repo
+	https://help.github.com/articles/fork-a-repo
+
+	Difference between Commit and Push
+	http://stackoverflow.com/questions/2745076/what-is-the-difference-between-git-commit-and-git-push
+
+	https://www.atlassian.com/git/tutorials/what-is-git
+	
+##################################################
