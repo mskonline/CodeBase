@@ -25,17 +25,18 @@ untouched, and use these issues as data cleaning exercises.
 
 
 ## Installation:
+https://dev.mysql.com/doc/employee/en/employees-installation.html
 
 1. Download the repository
 2. Change directory to the repository
 3. run
 
-    mysql < employees.sql
+    mysql -t < employees.sql
 
 
 If you want to install with two large partitioned tables, run
 
-    mysql < employees_partitioned.sql
+    mysql -t < employees_partitioned.sql
 
 
 ## Testing the installation
