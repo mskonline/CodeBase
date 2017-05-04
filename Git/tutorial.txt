@@ -8,9 +8,10 @@ Git Commands and References
 4. Status
 5. Commit and Push
 6. Removing files
-7. GIT Man pages
+7. Checking logs
+8. GIT Man pages
 
-Last updated : 12:21 PM Thursday, March 30, 2017 CDT
+Last updated : 5:33 PM Friday, April 28, 2017 CDT
 
 ###############################################
 
@@ -101,12 +102,20 @@ Two ways :
 
 #################################################
 
-7. Misc operations	
+7. Checking logs
+
+- Check commit logs with pretty formatting
+
+	git log --pretty=format:"%an %ar" master | less
+
+#################################################	
+	
+8. Misc operations	
 	
 -Commit changes between last two commits	
  
 	git diff --name-only HEAD HEAD~1
-
+	
 #################################################
 	
 References:

@@ -2,7 +2,7 @@
 
 -- MySQL
 
--- Last updated : 2:14 PM Thursday, March 30, 2017
+-- Last updated : 2:07 AM Friday, April 14, 2017
 
 --###############################################
 
@@ -23,24 +23,40 @@
 
 -- View Databases
 
-SHOW DATABASES;
+	SHOW DATABASES;
 
 -- View users
 
-SELECT * FROM mysql.user;
+	SELECT * FROM mysql.user;
 
+-- View connections
+
+	SHOW status LIKE '%onn%';
+	
 -- Select a Database
 
-USE <db_name>;
+	USE <db_name>;
 
 -- Show tables
 
-SHOW TABLES;
+	SHOW TABLES;
 
 -- Describe table
 
-DESC <table_name>;
+	DESC <table_name>;
 
 -- Select queries
+
+	SELECT * FROM employees;
+	
+	SELECT emp.* FROM employees AS emp;
+	
+-- Count records
+
+	SELECT COUNT(*) FROM employees;
+	
+	
+
+	
 
 

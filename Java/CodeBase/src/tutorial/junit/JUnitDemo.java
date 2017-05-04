@@ -1,9 +1,10 @@
 package tutorial.junit;
 
 import org.junit.Test;
-import org.junit.Assert;
 
-import tutorial.sorting.QuickSort;
+import tutorial.algorithms.sorting.QuickSort;
+
+import org.junit.Assert;
 
 public class JUnitDemo {
 
