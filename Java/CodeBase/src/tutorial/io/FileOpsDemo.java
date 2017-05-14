@@ -1,7 +1,11 @@
 package tutorial.io;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class FileOpsDemo {
 
@@ -39,7 +43,18 @@ public class FileOpsDemo {
 
 	}
 
-	public void readLineByLineFromFile(){
-		File f = new File(file);
+	public void readLineByLineFromFile() throws IOException{
+		FileInputStream fis = new FileInputStream("sample.txt");
+
+		//Construct BufferedReader from InputStreamReader
+		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+		String line = null;
+
+		while ((line = br.readLine()) != null) {
+
+		}
+
+		br.close();
 	}
 }

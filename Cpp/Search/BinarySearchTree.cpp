@@ -241,6 +241,38 @@ void printPostOrder(node *current)
     cout << current->data << endl;
 }
 
+void levelOrder(node * root)
+{
+  int level = 1;
+
+  if(root == NULL)
+      return;
+
+  cout << root->data << " ";
+
+  queue<node *> bQueue;
+
+  if(root->left != NULL)
+    bQueue.push(root->left);
+
+  if(root->right != NULL)
+    bQueue.push(root->right);
+
+  while(!bQueue.empty()){
+      root = bQueue.front();
+
+      bQueue.pop();
+
+      cout << root->data << " ";
+
+      if(root->left != NULL)
+        bQueue.push(root->left);
+
+      if(root->right != NULL)
+        bQueue.push(root->right);
+  }
+}
+
 //
 node* convertBST(node* root)
 {
