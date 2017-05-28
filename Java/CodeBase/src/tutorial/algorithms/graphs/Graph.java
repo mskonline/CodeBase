@@ -2,14 +2,14 @@ package tutorial.algorithms.graphs;
 
 public class Graph {
 
-	private int numNodes;
+	private int numVertices;
 
 	private int[][] adjMatrix;
 
-	public Graph(int numNodes){
-		this.numNodes = numNodes;
+	public Graph(int numVertices){
+		this.numVertices = numVertices;
 
-		adjMatrix = new int[numNodes][numNodes];
+		adjMatrix = new int[numVertices][numVertices];
 	}
 
 	public void addEdge(int u, int v){
@@ -23,10 +23,18 @@ public class Graph {
 	}
 
 	public void printAdjMatrix(){
-		for(int i = 0; i < numNodes; ++i){
-			for(int j = 0; j < numNodes; ++j)
+		for(int i = 0; i < numVertices; ++i){
+			for(int j = 0; j < numVertices; ++j)
 				System.out.print(this.adjMatrix[i][j] + " ");
 			System.out.println();
 		}
+	}
+
+	public int getNumVertices() {
+		return numVertices;
+	}
+
+	public int[][] getAdjMatrix() {
+		return adjMatrix;
 	}
 }

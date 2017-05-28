@@ -7,7 +7,7 @@ public class StringTest {
 		String s1=new String("Buggy");
 		//test(s1);
 
-		System.out.println(s1);
+		System.out.println(s1.substring(0,1));
 	}
 
 	private static void test(StringBuffer s){

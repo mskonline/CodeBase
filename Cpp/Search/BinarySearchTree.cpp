@@ -135,6 +135,8 @@ int height(node *current)
     }
 }
 
+
+
 void top_view(node *current)
 {
     printLeft(current);
@@ -241,6 +243,9 @@ void printPostOrder(node *current)
     cout << current->data << endl;
 }
 
+/**
+ * Iterative
+ */
 void levelOrder(node * root)
 {
   int level = 1;
@@ -271,6 +276,13 @@ void levelOrder(node * root)
       if(root->right != NULL)
         bQueue.push(root->right);
   }
+}
+
+/**
+ * Recursive
+ */
+void levelOrderRecursive()
+{
 }
 
 //
