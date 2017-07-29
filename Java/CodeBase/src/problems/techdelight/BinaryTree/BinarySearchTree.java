@@ -73,16 +73,16 @@ public class BinarySearchTree {
 
 					if (focusNode == null) {
 						parent.left = newNode;
-						return;
+						++numNodes;
+						break;
 					}
 				} else {
 					focusNode = focusNode.right;
 
 					if (focusNode == null) {
-
 						parent.right = newNode;
-						return;
-
+						++numNodes;
+						break;
 					}
 				}
 			}

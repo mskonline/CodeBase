@@ -17,10 +17,10 @@ public class MirrorofBinaryTree {
 		if(n == null)
 			return;
 
-		swap(n);
-
 		mirrorofBinaryTree(n.left);
 		mirrorofBinaryTree(n.right);
+
+		swap(n);
 	}
 
 	public static void swap(Node n){
