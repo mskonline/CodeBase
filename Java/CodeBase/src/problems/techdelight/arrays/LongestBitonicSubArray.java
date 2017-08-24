@@ -14,7 +14,6 @@ public class LongestBitonicSubArray {
 		int len;
 
 		while(i + 1 < n){
-
 			len = 1;
 			while(i + 1 < n && A[i] < A[i + 1]){
 				i++;
