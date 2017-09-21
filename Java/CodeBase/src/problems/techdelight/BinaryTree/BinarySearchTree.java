@@ -94,7 +94,6 @@ public class BinarySearchTree {
 	}
 
 	public void inorder(Node n){
-
 		if(n == null)
 			return;
 

@@ -8,7 +8,6 @@ public class SubArrayWithGivenSum {
 	}
 
 	public static void findSubarray(int[] A, int sum){
-
 		int low = 0, high = 0;
 		int n = A.length;
 

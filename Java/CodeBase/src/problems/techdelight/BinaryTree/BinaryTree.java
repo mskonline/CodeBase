@@ -7,7 +7,6 @@ public class BinaryTree {
 	public Node root;
 
 	public static void main(String[] args) {
-
 	}
 
 	public BinaryTree(int[] values){
@@ -15,8 +14,6 @@ public class BinaryTree {
 			return;
 
 		insert(values);
-
-
 	}
 
 	public void insert(int v){
@@ -30,7 +27,6 @@ public class BinaryTree {
 		Node n;
 
 		if(r.nextInt(100) % 2 == 0){
-
 			n = root.right;
 
 			while(n != null){
@@ -39,13 +35,10 @@ public class BinaryTree {
 				else
 					n = n.left;
 			}
-
-
 		}else {
 			// left
 		}
 	}
-
 
 	public void insert(int[] v){
 		if(root == null){

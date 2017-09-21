@@ -1,7 +1,7 @@
-package problems.techdelight.linkedlist;
+package problems.ctci.linkedlist;
 
 public class LinkedList {
-	public Node HEAD;
+	Node HEAD;
 	int size = 0;
 
 	public LinkedList(int data){
