@@ -8,7 +8,7 @@ public class MajorityElement {
 	}
 
 	public static void findMajority(){
-		int[] array = {2,2,2,4};
+		int[] array = {2,2,3,4,5};
 
 		int counter = 0, m = 0;
 

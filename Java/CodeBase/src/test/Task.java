@@ -11,4 +11,9 @@ public class Task {
 		this.due = due;
 		this.name = name;
 	}
+
+	public static void main(String[] args) {
+		char ch = Character.forDigit(3, 10);
+		System.out.println("Value is " + ch);
+	}
 }

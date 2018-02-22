@@ -20,7 +20,6 @@ public class MaximumDifferenceinArray {
             maxSoFar = Math.max(maxCur, maxSoFar);
         }
 
-
         return maxSoFar == 0 ? -1 : maxSoFar;
 	}
 }
