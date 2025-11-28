@@ -3,13 +3,13 @@ package tutorial.algorithms.graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreadthFirstSearchDemo {
+public class BreadthFirstSearch {
 
 	public static void main(String[] args) {
-		new BreadthFirstSearchDemo();
+		new BreadthFirstSearch();
 	}
 
-	public BreadthFirstSearchDemo() {
+	public BreadthFirstSearch() {
 		Graph g = new Graph(3);
 		g.addEdge(0, 1);
 		g.addEdge(0, 2);
