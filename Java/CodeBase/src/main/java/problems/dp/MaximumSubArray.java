@@ -1,4 +1,4 @@
-package problems.dynamicprogramming;
+package problems.dp;
 
 /**
  * http://www.techiedelight.com/maximum-subarray-problem-kadanes-algorithm/
